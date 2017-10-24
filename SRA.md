@@ -68,7 +68,7 @@ It also imports other service modules and decides which page to route according 
 
 #### SRA Unit in Graph
 You might need to read it a few times
-![]()   
+![](https://github.com/ivsall2012/A-Highly-Distributed-Architecture-for-Large-scale-Collaborations/blob/master/SRA_unit.png)   
 As you can see from the image above, the only direct dependencies are from those services and AHServiceRouter which are all related to routing and not about business logics or UI logics. And they are distributed. Considering a main module has a weak delegate "dependency" so it's independent.    
 Now only left the managers which send out network requests and process data, are somewhat dirty but it's very limited.  
 
