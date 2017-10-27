@@ -91,7 +91,7 @@ Here's my understanding of the VM, I think of it as a view controller helper, he
 
 NOTE: Every business module should have a networking/persistence layer(as a manager) and presentation layer.   
 NOTE: Do not let any data model gets involved into your presentation layer. Use simple data type such as dictionary to pass them from networking/persistence layer to presentation layer.  
-NOTE: More details in next article [the Service Router Architecture(SRA)]().  
+NOTE: More details in next article [the Service Router Architecture(SRA)](https://github.com/ivsall2012/A-Highly-Distributed-Architecture-for-Large-scale-Collaborations/blob/master/SRA.md).  
 
 ### 7. Networking
 There are two ways to design a networking SDK:  
@@ -145,7 +145,7 @@ Its data model, NSFetchedResultsController, managed object context are misleadin
 CoreData always reminds me of VIPER.    
 
 #### Realm
-I was using Realm for [AHFM](https://github.com/iOSModularization/AHFM) at the first version. AHFM is the project which uses [the Service Router Architecture(SRA)]() entirely. You are about to read it later.  
+I was using Realm for [AHFM](https://github.com/iOSModularization/AHFM) at the first version. AHFM is the project which uses [the Service Router Architecture(SRA)](https://github.com/ivsall2012/A-Highly-Distributed-Architecture-for-Large-scale-Collaborations/blob/master/SRA.md) entirely. You are about to read it later.  
 At first, I found out that Realm just couldn't be packed into a pod module as a dynamic framework which can dramatically reduces the compile time. Because I wanted a persistence layer wrapped around it. The issue is [here](https://github.com/realm/realm-cocoa/issues/5230).  
 Then I stupidly hacked my way out and made Xcode compiled it. And I didn't think it would be still a problem remained unsolved. Not to mention that every time I do a 'pod install' to that persistence layer module, it took me 3-5 minutes to finish the compilation which greatly affected my moods and faith in continuing developing the project. But since I'm a strong man so pushed through it until later in the development. I realize that problem which Xcode just wouldn't compile in a normal way thus it couldn't be a pod module.   
 Since I'm a strong man again, I gave up using Realm and wrote my own SQLite data modeling framework:  
