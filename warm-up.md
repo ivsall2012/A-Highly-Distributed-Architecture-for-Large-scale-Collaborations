@@ -195,9 +195,9 @@ Samples:
 **A**: [AHFMDataTransformers](https://github.com/iOSModularization/AHFMDataTransformers)  
 I should have put both of those dataTransformers into separate modules, but I just didn't think it through. Yeah I was kinda lazy...  
 **B**: [AHFMShowPageManager](https://github.com/iOSModularization/AHFMShowPageManger)  
-A networking/persistence layer for [AHFMShowPage](https://github.com/iOSModularization/AHFMShowPage)
-**C**: [AHFMAudioPlayerVCManager](https://github.com/iOSModularization/AHFMAudioPlayerVCManager)
-A networking/persistence layer for [AHFMAudioPlayerVC](https://github.com/iOSModularization/AHFMAudioPlayerVC)
+A networking/persistence layer for [AHFMShowPage](https://github.com/iOSModularization/AHFMShowPage)  
+**C**: [AHFMAudioPlayerVCManager](https://github.com/iOSModularization/AHFMAudioPlayerVCManager)  
+A networking/persistence layer for [AHFMAudioPlayerVC](https://github.com/iOSModularization/AHFMAudioPlayerVC)  
 
 
 ### 9. How to Design A Multiple Delegate System
