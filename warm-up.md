@@ -2,7 +2,7 @@
 The followings are some of the mistakes I made, learned lessons and experiences.  
 
 ## Purpose 
-The purpose of this article is to give you more context in order to read the next one [the Service Router Architecture(SRA)]().  
+The purpose of this article is to give you more context in order to read the next one [the Service Router Architecture(SRA)](the Service Router Architecture(SRA)).  
 If you think I'm wrong about something here, please DO let me know.  
 
 ## Content
