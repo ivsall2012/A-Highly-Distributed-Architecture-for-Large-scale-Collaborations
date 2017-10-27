@@ -264,7 +264,7 @@ A complete sample project:
 
 
 ## Conclusion
-Introducing [the Service Router Architecture(SRA)]()
+Introducing [the Service Router Architecture(SRA)](https://github.com/ivsall2012/A-Highly-Distributed-Architecture-for-Large-scale-Collaborations/blob/master/SRA.md)
 
 
 
