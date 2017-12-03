@@ -266,8 +266,10 @@ public class Monitor: NSObject {
 ```
 
 一个下载器案例就是用了这个多代理模式来给外界监听下载进度的:  
-[AHDownloader](https://github.com/ivsall2012/AHDownloader)
+[AHDownloader](https://github.com/ivsall2012/AHDownloader)   
 
 
-## Conclusion
-Introducing [the Service Router Architecture(SRA)]()
+
+
+
+
