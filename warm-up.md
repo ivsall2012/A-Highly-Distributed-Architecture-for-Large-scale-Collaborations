@@ -1,3 +1,5 @@
+[切换到中文](https://github.com/ivsall2012/A-Highly-Distributed-Architecture-for-Large-scale-Collaborations/blob/master/warm-up.md)
+
 # Warm Up
 The followings are some of the mistakes I made, learned lessons and experiences.  
 
@@ -57,7 +59,11 @@ If you use a closure as a method parameter, as some RAC or RxSwift developers su
 
 #### Cons:  
 A closure also increases captured objects' lifetime, not just "self", all objects involved.  
-All captured objects will have their retainCounter+1 in the code block, if you don't flag them as "weak". And if there's one object becomes nil before the closure gets executed, a "EXC_BAD_ACCESS" will knock on your screen.  
+All captured objects will have their retainCounter+1 in the code block, if you don't flag them as "weak" then make it strong inside the closure(block in Objective-C), the object might be nil and：  
+1. In Objective-C, the object is nil and do nothing, most importantly, it would mess out your logics since the codes inside the block assumes the object is not nil.  
+2. In Swift, the compiler though would warn you if you do "[weak object]" and you didn't use optional. And if you accidentally unwrap it, the program would crash, since Swift, unlike Objective-C, nil object's operation will crash the whole program.  
+
+
 It might causes retain cycles, particularly three-way retain cycles.  
 It's hard to debug.  
 A closure can be passed and executed by any object at anytime in any thread -- it's just too flexible and not clear, too many uncertainties, at least this is how I feel about it!  
@@ -261,10 +267,6 @@ public class Monitor: NSObject {
 
 A complete sample project:  
 [AHDownloader](https://github.com/ivsall2012/AHDownloader)
-
-
-## Conclusion
-Introducing [the Service Router Architecture(SRA)](https://github.com/ivsall2012/A-Highly-Distributed-Architecture-for-Large-scale-Collaborations/blob/master/SRA.md)
 
 
 
